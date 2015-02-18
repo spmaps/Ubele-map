@@ -18,20 +18,26 @@
 
 <script>      
 
+var LeafIcon = L.Icon.extend({
+			options: {
+				shadowUrl: 'http://leafletjs.com/docs/images/leaf-shadow.png',
+				iconSize:     [38, 95],
+				shadowSize:   [50, 64],
+				iconAnchor:   [22, 94],
+				shadowAnchor: [4, 62],
+				popupAnchor:  [-3, -76]
+			}
+		});
 
-var communityIcon = L.icon({
-    iconUrl: 'http://leafletjs.com/docs/images/leaf-red.png',
-    iconSize:     [30, 60], // size of the icon  
-    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location 
-    popupAnchor:  [-3, -40] // point from which the popup should open relative to the iconAnchor
-});
+
+var redIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/leaf-red.png'});
 
 
 
 var communityassets = new L.LayerGroup();
 
-    L.marker([51.4650889238678,-0.11319994926452637], {icon: communityIcon}).bindPopup('<img src="http://s0.geograph.org.uk/geophotos/02/30/91/2309122_c78bbcc6.jpg" width="300" height="280"></br>KARIBU CENTRE, 7 Gresham Road, Brixton - www.karibueducationcentre.org.uk</br><a href="https://soundcloud.com/santinska/in-conversation-with-xxx">Click here to listen to an interview with the Karibu Centre</a>').addTo(communityassets),
-	L.marker([51.43121671447266,-0.027744770050048828], {icon: communityIcon}).bindPopup('<img src="http://www.openplay.co.uk/public/site/thumbs/270-230-0-0-tn-imageFile-15.jpg" width="300" height="280"></br>LEWISHAM SPORTS CONSORTIUM, 140 Firhill Road, London SE6 3SQ - www.lsportsc.org</br><a href="https://soundcloud.com/santinska/in-conversation-with-xxx">Click here to listen to an interview with Lewisham Sports Consortium</a>').addTo(communityassets);
+    L.marker([51.4650889238678,-0.11319994926452637], {icon: redIcon}).bindPopup('<img src="http://s0.geograph.org.uk/geophotos/02/30/91/2309122_c78bbcc6.jpg" width="300" height="280"></br>KARIBU CENTRE, 7 Gresham Road, Brixton - www.karibueducationcentre.org.uk</br><a href="https://soundcloud.com/santinska/in-conversation-with-xxx">Click here to listen to an interview with the Karibu Centre</a>').addTo(communityassets),
+	L.marker([51.43121671447266,-0.027744770050048828], {icon: redIcon}).bindPopup('<img src="http://www.openplay.co.uk/public/site/thumbs/270-230-0-0-tn-imageFile-15.jpg" width="300" height="280"></br>LEWISHAM SPORTS CONSORTIUM, 140 Firhill Road, London SE6 3SQ - www.lsportsc.org</br><a href="https://soundcloud.com/santinska/in-conversation-with-xxx">Click here to listen to an interview with Lewisham Sports Consortium</a>').addTo(communityassets);
 
 
 
@@ -64,6 +70,9 @@ var communityassets = new L.LayerGroup();
 </script>	
 </body>
 </html>
+
+
+
 
 
 
