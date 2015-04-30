@@ -32,9 +32,6 @@ var LeafIcon = L.Icon.extend({
 
 var greenIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png'});
 
-var redIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/leaf-red.png'});
-
-
 var communityassets = new L.LayerGroup();
 
     L.marker([51.4650889238678,-0.11319994926452637], {icon: greenIcon}).bindPopup('<img src="http://s0.geograph.org.uk/geophotos/02/30/91/2309122_c78bbcc6.jpg" width="300" height="280"></br>KARIBU CENTRE, 7 Gresham Road, Brixton - www.karibueducationcentre.org.uk</br><a href="https://soundcloud.com/santinska/in-conversation-with-karibu-education-centre">Click here to listen to an interview with the Karibu Centre</a>').addTo(communityassets),
@@ -42,6 +39,8 @@ var communityassets = new L.LayerGroup();
         L.marker([51.58205659637589,-0.08960723876953125], {icon: greenIcon}).bindPopup('<img src="https://dl.dropboxusercontent.com/u/69787788/NF%20website/Chestnuts3.jpg" width="300" height="250"></br>CHESTNUTS COMMUNITY CENTRE, 280 Saint Anns Road, London N15 5BN</br><a href="https://soundcloud.com/santinska/in-conversation-with-chestnuts-community-centre">Click here to listen to an interview with Chestnuts Community Centre</a>').addTo(communityassets),
         L.marker([51.60634401511549,-0.07214069366455078], {icon: greenIcon}).bindPopup('<img src="https://dl.dropboxusercontent.com/u/69787788/Irish_centre.jpg" width="300" height="250"></br>HARINGEY IRISH CENTRE, Pretoria Road, London N17 8DX</br><a href="https://soundcloud.com/santinska/ubele-in-conversation-with-the-haringey-irish-centre">Click here to listen to an interview with Haringey Irish Centre</a>').addTo(communityassets);
 
+
+var redIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/leaf-red.png'});
 
 var lostcommunityassets = new L.LayerGroup();
 
