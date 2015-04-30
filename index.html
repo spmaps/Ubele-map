@@ -32,16 +32,21 @@ var LeafIcon = L.Icon.extend({
 
 var greenIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png'});
 
+var redIcon = new LeafIcon({iconUrl: 'http://leafletjs.com/docs/images/red-green.png'});
 
 
 var communityassets = new L.LayerGroup();
 
     L.marker([51.4650889238678,-0.11319994926452637], {icon: greenIcon}).bindPopup('<img src="http://s0.geograph.org.uk/geophotos/02/30/91/2309122_c78bbcc6.jpg" width="300" height="280"></br>KARIBU CENTRE, 7 Gresham Road, Brixton - www.karibueducationcentre.org.uk</br><a href="https://soundcloud.com/santinska/in-conversation-with-karibu-education-centre">Click here to listen to an interview with the Karibu Centre</a>').addTo(communityassets),
 	L.marker([51.43121671447266,-0.027744770050048828], {icon: greenIcon}).bindPopup('<img src="http://playingfieldslegacyfund.org.uk.gridhosted.co.uk/wp-content/uploads/2013/03/football-394x200.jpg" width="300" height="180"></br>LEWISHAM SPORTS CONSORTIUM, 140 Firhill Road, London SE6 3SQ - www.lsportsc.org</br><a href="https://soundcloud.com/santinska/in-conversation-with-lewisham-sports-consortium">Click here to listen to an interview with Lewisham Sports Consortium</a>').addTo(communityassets),
-        L.marker([51.58205659637589,-0.08960723876953125], {icon: greenIcon}).bindPopup('<img src="https://dl.dropboxusercontent.com/u/69787788/NF%20website/Chestnuts3.jpg" width="300" height="250"></br>CHESTNUTS COMMUNITY CENTRE, 280 Saint Anns Road, London N15 5BN</br><a href="https://soundcloud.com/santinska/in-conversation-with-chestnuts-community-centre">Click here to listen to an interview with Chestnuts Community Centre</a>').addTo(communityassets);
+        L.marker([51.58205659637589,-0.08960723876953125], {icon: greenIcon}).bindPopup('<img src="https://dl.dropboxusercontent.com/u/69787788/NF%20website/Chestnuts3.jpg" width="300" height="250"></br>CHESTNUTS COMMUNITY CENTRE, 280 Saint Anns Road, London N15 5BN</br><a href="https://soundcloud.com/santinska/in-conversation-with-chestnuts-community-centre">Click here to listen to an interview with Chestnuts Community Centre</a>').addTo(communityassets),
         L.marker([51.60634401511549,-0.07214069366455078], {icon: greenIcon}).bindPopup('<img src="https://dl.dropboxusercontent.com/u/69787788/Irish_centre.jpg" width="300" height="250"></br>HARINGEY IRISH CENTRE, Pretoria Road, London N17 8DX</br><a href="https://soundcloud.com/santinska/ubele-in-conversation-with-the-haringey-irish-centre">Click here to listen to an interview with Haringey Irish Centre</a>').addTo(communityassets);
 
 
+var lostcommunityassets = new L.LayerGroup();
+
+    L.marker([51.511854103063,-0.12422919273376465], {icon: redIcon}).bindPopup('<img src="http://www.blackheritagetodayuk.com/wp-content/uploads/2011/11/SaveAfricaCentre-600x337.jpg" width="300" height="280"></br>THE AFRICA CENTRE, 38 King street, Covent Garden, London - LOST COMMUNITY ASSET</br><a href="www.blackheritagetodayuk.com/wp-content/uploads/2011/11/SaveAfricaCentre-600x337.jpg">Click here to listen to an interview with Save the Africa Centre Campaign</a>').addTo(lostcommunityassets),
+	L.marker([51.43121671447266,-0.027744770050048828], {icon: redIcon}).bindPopup('<img src="https://savelambethwomensproject.files.wordpress.com/2012/07/embroidery-lessons.jpg" width="300" height="180"></br>LAMBETH WOMEN PROJECT - www.savelambethwomensproject.wordpress.com</br><a href="https://savelambethwomensproject.files.wordpress.com/2012/07/embroidery-lessons.jpg">Click here to listen to an interview with Lambeth Women Project</a>').addTo(lostcommunityassets);
 
     var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">Ubele team</a>, ' +
@@ -63,7 +68,8 @@ var communityassets = new L.LayerGroup();
 	};
 
 	var overlays = {
-		"London BAME Community Assets": communityassets
+		"London existing BAME Community Assets": communityassets,
+		"London lost BAME Community Assets": lostcommunityassets
 	};
 
 	L.control.layers(baseLayers, overlays).addTo(map);
