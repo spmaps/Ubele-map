@@ -60,9 +60,7 @@ var lostcommunityassets = new L.LayerGroup();
 			'Imagery © <a href="http://carto.com">Carto</a>',
 		mbUrl = 'https://cartocdn-gusc-a.global.ssl.fastly.net/santinska/api/v1/map/santinska@7b3c52ae@2d9baefa0a07df8fbb58780802cab20a:1571414231477/1/10/512/340.png';
 
-    var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
-	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
-		
+    
 	var map = L.map('map', {
 		center: [51.547, -0.081],
 		zoom: 11,
