@@ -57,8 +57,8 @@ var lostcommunityassets = new L.LayerGroup();
 
     var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">UbeleTeam</a>, ' +
-			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
+			'Imagery © <a href="http://carto.com">Carto</a>',
+		mbUrl = 'https://santinska.carto.com/builder/80089bfd-2c23-4754-8d87-78c7ffd5f817/embed';
 
     var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
 	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
