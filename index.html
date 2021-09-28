@@ -67,13 +67,14 @@ var lostcommunityassets = new L.LayerGroup();
 		layers: [streets, communityassets, lostcommunityassets]
 	});
 
-	var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
-	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
-	
 	var baseLayers = {
 		"Grayscale": grayscale,
 		"Colour Map": streets
 	};
+	
+	var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
+	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
+	
 
 	var overlays = {
 		"London existing BAME Community Assets": communityassets,
