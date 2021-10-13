@@ -61,8 +61,8 @@ var lostcommunityassets = new L.LayerGroup();
 		mbUrl = 'https://api.mapbox.com/styles/v1/santinska/ciuhbl03g00072inoafxhppps.html?title=view&access_token=pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg&zoomwheel=true&fresh=true#10.15/51.5025/-0.0955';
 	
 	
-var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),
-		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox://styles/santinska/ciuhbl03g00072inoafxhppps', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),
+		streets  = L.tileLayer(mbUrl, {id: 'mapbox://styles/santinska/ciuhbl03g00072inoafxhppps', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
 
 	var map = L.map('map', {
 		center: [51.547, -0.081],
