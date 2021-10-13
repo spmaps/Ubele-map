@@ -60,8 +60,8 @@ var lostcommunityassets = new L.LayerGroup();
 			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 
-    var streets  = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',   attribution: mbAttr});
-
+var grayscale   = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: mbAttr}),
+	    streets  = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',   attribution: mbAttr});
 
 	var map = L.map('map', {
 		center: [51.547, -0.081],
