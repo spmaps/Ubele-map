@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="stylesheets/leaflet.css" />
 
      <script src="javascripts/leaflet.js"></script>
-
-
 </head>
+
+
+
 <body>
 	<div id="map" style="height: 650px"></div>
 
@@ -56,10 +57,12 @@ var lostcommunityassets = new L.LayerGroup();
 
     var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">UbeleTeam</a>, ' +
-			'Imagery © <a href="http://carto.com">Carto</a>',
-		mbUrl = 'https://cartocdn-gusc-a.global.ssl.fastly.net/santinska/api/v1/map/santinska@7b3c52ae@2d9baefa0a07df8fbb58780802cab20a:1571414231477/1/10/512/340.png';
+			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 
-    
+    var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
+	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
+
 	var map = L.map('map', {
 		center: [51.547, -0.081],
 		zoom: 11,
@@ -67,13 +70,10 @@ var lostcommunityassets = new L.LayerGroup();
 	});
 
 	var baseLayers = {
-		"Grayscale": grayscale
+		"Grayscale": grayscale,
+		"Colour Map": streets
 	};
-	
-	var grayscale   = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: mbAttr});
-	
 
-	
 	var overlays = {
 		"London existing BAME Community Assets": communityassets,
 		"London lost BAME Community Assets": lostcommunityassets
@@ -84,9 +84,3 @@ var lostcommunityassets = new L.LayerGroup();
 </script>	
 </body>
 </html>
-
-
-
-
-
-
