@@ -60,8 +60,8 @@ var lostcommunityassets = new L.LayerGroup();
 			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
 
-    var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
-	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
+    var grayscale   = L.tileLayer(mbUrl, {id: 'https://api.mapbox.com/styles/v1/santinska/ciuhbl03g00072inoafxhppps.html?title=view&access_token=pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg&zoomwheel=true&fresh=true#10.15/51.5025/-0.0955', attribution: mbAttr}),
+	    streets  = L.tileLayer(mbUrl, {id: 'https://api.mapbox.com/styles/v1/santinska/ciuhbl03g00072inoafxhppps.html?title=view&access_token=pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg&zoomwheel=true&fresh=true#10.15/51.5025/-0.0955',   attribution: mbAttr});
 
 	var map = L.map('map', {
 		center: [51.547, -0.081],
