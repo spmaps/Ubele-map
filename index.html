@@ -9,10 +9,9 @@
 	<link rel="stylesheet" href="stylesheets/leaflet.css" />
 
      <script src="javascripts/leaflet.js"></script>
+
+
 </head>
-
-
-
 <body>
 	<div id="map" style="height: 650px"></div>
 
@@ -72,10 +71,11 @@ var lostcommunityassets = new L.LayerGroup();
 		"Colour Map": streets
 	};
 	
-	var grayscale   = L.tileLayer(mbUrl, {id: 'pk.eyJ1Ijoic2FudGluc2thIiwiYSI6Imx3Y3hIc28ifQ.l6XsY0M_EFDlUPy53KY0Eg', attribution: mbAttr}),
+	var grayscale   = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: mbAttr}),
 	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
 	
 
+	
 	var overlays = {
 		"London existing BAME Community Assets": communityassets,
 		"London lost BAME Community Assets": lostcommunityassets
