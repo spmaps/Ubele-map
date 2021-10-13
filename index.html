@@ -67,12 +67,10 @@ var lostcommunityassets = new L.LayerGroup();
 	});
 
 	var baseLayers = {
-		"Grayscale": grayscale,
-		"Colour Map": streets
+		"Grayscale": grayscale
 	};
 	
-	var grayscale   = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: mbAttr}),
-	    streets  = L.tileLayer(mbUrl, {id: 'santinska.l7np8p7j',   attribution: mbAttr});
+	var grayscale   = L.tileLayer(mbUrl, {id: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: mbAttr});
 	
 
 	
